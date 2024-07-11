@@ -99,11 +99,14 @@ int[][]? TakeInput()
     while (!isValidInput)
     {
         Console.WriteLine("================================");
-        Console.WriteLine("Please enter the Sudoku board as a single line JSON string or drag a .json file here:");
+        Console.WriteLine("Please enter the Sudoku board in following options or empty input to exit: ");
+        Console.WriteLine("option 1. Enter a single line JSON string.");
+        Console.WriteLine("option 2. Drag and drop the .json file here. (Win/Mac only)");
+        Console.WriteLine("--------------------------------");
         var input = Console.ReadLine();
-        if (string.IsNullOrEmpty(input))
+        if (string.IsNullOrWhiteSpace(input))
         {
-            Console.WriteLine("No input provided.");
+            Console.WriteLine("No input provided. Program will exit.");
             return null;
         }
         input = input.Trim();
