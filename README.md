@@ -2,12 +2,14 @@
 # Sudoku solver console app
 
 ## Instructions
-#### Open terminal in the project root folder (where .csproj located)
-#### Run following command to start (.NET 8.0 runtime is required)
+Open terminal in the project root folder (where .csproj located) 
+<br /><br />
+Run following command to start (.NET 8.0 sdk is required)
 ```csharp
 dotnet run
 ```
 ## Ready to use sudoku puzzles
+0 represents an empty cell
 ```csharp
 [[0,9,0,8,6,5,2,0,0],[0,0,5,0,1,2,0,6,8],[0,0,0,0,0,0,0,4,0],[0,0,0,0,0,8,0,5,6],[0,0,8,0,0,0,4,0,0],[4,5,0,9,0,0,0,0,0],[0,8,0,0,0,0,0,0,0],[2,4,0,1,7,0,5,0,0],[0,0,7,2,8,3,0,9,0]]
 ```
