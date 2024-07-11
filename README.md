@@ -1,5 +1,5 @@
 
-# Sudoku solver console app
+# Sudoku Solver Console App
 
 ## Run locally
 Open terminal in the project root folder (where `SudokuSolver.csproj` located) 
