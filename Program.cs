@@ -2,8 +2,19 @@
 using System.Text.RegularExpressions;
 
 int[][]? inputBoard = TakeInput();
-if (inputBoard == null) return; // Empty input, exit the program
-int[][] outputBoard = SolveSudoku(inputBoard);
+if (inputBoard == null)
+{
+    Console.WriteLine("No input provided. Program will exit.");
+    return;
+}
+
+int[][]? outputBoard = SolveSudoku(inputBoard);
+if (outputBoard == null)
+{
+    Console.WriteLine("No solution found or invalid input.");
+    return;
+} 
+
 DisplayBoard(outputBoard);
 return;
 
@@ -17,10 +28,12 @@ return;
 
 #region Solver methods
 
-int[][] SolveSudoku(int[][] board) {
-    var solved = false;
-    while (!solved) {
-        solved = Backtrack(board, 0);
+int[][]? SolveSudoku(int[][] board) {
+    
+    // Solve the board using backtracking
+    if (!Backtrack(board, 0))
+    {
+        return null; // Failed to solve the board
     }
     
     return board;
@@ -103,10 +116,10 @@ int[][]? TakeInput()
         Console.WriteLine("option 1. Enter a single line JSON string.");
         Console.WriteLine("option 2. Drag and drop the .json file here. (Win/Mac only)");
         Console.WriteLine("--------------------------------");
+        Console.Write("Enter your input: \n");
         var input = Console.ReadLine();
         if (string.IsNullOrWhiteSpace(input))
         {
-            Console.WriteLine("No input provided. Program will exit.");
             return null;
         }
         input = input.Trim();
