@@ -2,9 +2,16 @@
 using System.Text.RegularExpressions;
 
 int[][]? inputBoard = TakeInput();
+if (inputBoard == null) return; // Empty input, exit the program
 int[][] outputBoard = SolveSudoku(inputBoard);
 DisplayBoard(outputBoard);
 return;
+
+
+
+
+
+
 
 
 
@@ -97,7 +104,7 @@ int[][]? TakeInput()
         if (string.IsNullOrEmpty(input))
         {
             Console.WriteLine("No input provided.");
-            continue;
+            return null;
         }
         input = input.Trim();
 
