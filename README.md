@@ -1,8 +1,8 @@
 
 # Sudoku solver console app
 
-## Instructions
-Open terminal in the project root folder (where .csproj located) 
+## Run locally
+Open terminal in the project root folder (where `SudokuSolver.csproj` located) 
 <br /><br />
 Run following command to start (.NET 8.0 sdk is required)
 ```csharp
