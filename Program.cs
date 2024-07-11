@@ -140,7 +140,7 @@ int[][]? TakeInput()
         {
             validBoard = JsonSerializer.Deserialize<int[][]>(jsonInput);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             Console.WriteLine("Invalid json content.");
             continue;
